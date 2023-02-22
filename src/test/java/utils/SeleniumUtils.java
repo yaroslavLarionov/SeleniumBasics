@@ -16,7 +16,7 @@ public class SeleniumUtils {
      */
     public static void scrollIntoView(WebDriver driver, WebElement element){
         JavascriptExecutor jExecutor = (JavascriptExecutor) driver;
-        jExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
+        jExecutor.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
     }
 
     /**
